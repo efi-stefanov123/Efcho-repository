@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Set Background</title>
+	<style type="text/css">
+  #buton{
+    width: 40px;
+    height: 40px;
+  }
+  #colourtracker
+  {
+    width: 100px;
+    height: 100px;
+  }
+	</style>
+</head>
+<body>
+  <div>
+	   <input type="color" id="colourtracker" name="colour" onchange="changeColor()">
+  </div>
+  <br></br>
+  <div>
+	     <button id="buton" type="button" onclick="Gethex()">Get Hex</button>
+  </div>
+     <script type="text/javascript">
+      function changeColor()
+      {
+      	var colour = document.getElementById("colourtracker").value;
+      	document.bgColor=colour;
+      }
+      function  Gethex()
+      {
+        var colour = document.getElementById("colourtracker").value;
+        alert("The colour that you have selected is " + colour)
+      }
+     </script>
+ </body>
+</html>
